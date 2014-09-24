@@ -1,6 +1,6 @@
 {
   "name": "invariant",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "invariant",
   "licence": "BSD",
   "author": "Andres Suarez <zertosh@gmail.com>",
@@ -12,10 +12,8 @@
   "scripts": {
     "test": "mocha"
   },
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "engines": {
     "node": ">=0.10"
   }
