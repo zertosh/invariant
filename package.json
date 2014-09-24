@@ -13,7 +13,9 @@
     "test": "mocha"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^1.21.4"
+  },
   "engines": {
     "node": ">=0.10"
   }
