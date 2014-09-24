@@ -4,6 +4,7 @@
   "description": "invariant",
   "licence": "BSD",
   "author": "Andres Suarez <zertosh@gmail.com>",
+  "main": "invariant.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/zertosh/invariant.git"
