@@ -45,13 +45,7 @@
  * will remain to ensure logic does not differ in production.
  */
 
-var invariant = function(condition, format, a, b, c, d, e, f) {
-  // if (process.env.NODE_ENV !== 'production') {
-  //   if (format === undefined) {
-  //     throw new Error('invariant requires an error message argument');
-  //   }
-  // }
-
+function invariant (condition, format, a, b, c, d, e, f) {
   if (!condition) {
     var error;
     if (format === undefined) {
@@ -71,6 +65,16 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
     error.framesToPop = 1; // we don't care about invariant's own frame
     throw error;
   }
-};
+}
 
-module.exports = invariant;
+if (process.env.NODE_ENV === 'production') {
+  module.exports = invariant;
+} else {
+  module.exports = function (condition, format, a, b, c, d, e, f) {
+    if (format === undefined) {
+      throw new TypeError('invariant requires an error message argument');
+    }
+
+    return invariant(condition, format, a, b, c, d, e, f);
+  };
+}

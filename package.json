@@ -10,7 +10,7 @@
     "url": "git://github.com/zertosh/invariant.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "NODE_ENV=\"production\" mocha && NODE_ENV=\"development\" mocha"
   },
   "dependencies": {},
   "devDependencies": {
