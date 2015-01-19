@@ -2,6 +2,8 @@
 
 var assert = require('assert');
 
+var __DEV__ = process.env.NODE_ENV !== 'production';
+
 describe('invariant', function() {
 
   var invariant = require('../invariant');
@@ -15,13 +17,10 @@ describe('invariant', function() {
     }, /invariant message/);
   });
 
-  it('should work without a message', function() {
-    assert.doesNotThrow(function() {
-      invariant(true);
-    });
+  it('should not work without a message', function() {
     assert.throws(function() {
       invariant(false);
-    }, /minified exception occurred/i);
+    }, __DEV__ ? /requires an error/i : /minified exception occurred/i);
   });
 
 });
