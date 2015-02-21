@@ -22,10 +22,8 @@
  * will remain to ensure logic does not differ in production.
  */
 
-var __DEV__ = process.env.NODE_ENV !== 'production';
-
 var invariant = function(condition, format, a, b, c, d, e, f) {
-  if (__DEV__) {
+  if (process.env.NODE_ENV !== 'production') {
     if (format === undefined) {
       throw new Error('invariant requires an error message argument');
     }

@@ -2,9 +2,9 @@
 
 var assert = require('assert');
 
-describe('invariant', function() {
+describe('invariant-browser', function() {
 
-  var invariant = require('../invariant');
+  var invariant = require('../browser');
 
   it('should work with a message', function() {
     assert.doesNotThrow(function() {

@@ -2,24 +2,20 @@
 
 A mirror of Facebook's `invariant` (e.g. [React](https://github.com/facebook/react/blob/master/src/vendor/core/invariant.js), [flux](https://github.com/facebook/flux/blob/master/src/invariant.js)).
 
-**Modifications:** In the original code, the "invariant message" (`format`) is expected to not be `undefined` when `__DEV__` is `true`. `__DEV__` is transformed during the build process to `process.env.NODE_ENV !== 'production'`. Because `process.env` is not a regular object, but rather an object with getters to the environment, it has performance implications. So, to mitigate, the code has been commented out and `__DEV__` has been replaced with `process.env.NODE_ENV !== 'production'` for clarity.
+### Usage
 
-_Original_:_
-```js
-  if (__DEV__) {
-    if (format === undefined) {
-      throw new Error('invariant requires an error message argument');
-    }
-  }
+```sh
+npm install envify invariant
 ```
 
-_Modified:_
 ```js
-  // if (process.env.NODE_ENV !== 'production') {
-  //  if (format === undefined) {
-  //    throw new Error('invariant requires an error message argument');
-  //  }
-  // }
+var invariant = require('invariant');
 ```
 
-Additional information: [Server rendering is slower with npm react #812](https://github.com/facebook/react/issues/812)
+#### Browser
+
+Use [`browserify`](https://github.com/substack/node-browserify) in conjunction with [`envify`](https://github.com/hughsk/envify). **envify must be installed separately since it is not explicitly listed as a dependency in the `package.json`** (because not everyone will use `invariant` on the browser).
+
+#### Node
+
+Just use it. The node version is optimized around the performance implications of accessing `process.env`. The value of `process.env.NODE_ENV` is cache, and repeatedly used instead of querying `proces.env`. See [Server rendering is slower with npm react #812](https://github.com/facebook/react/issues/812)
