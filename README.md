@@ -10,6 +10,18 @@ npm install envify invariant
 
 ```js
 var invariant = require('invariant');
+
+invariant(true, 'This will not throw')
+// No errors
+
+invariant(false, 'This will throw an error with this message')
+// < Uncaught Error: Invariant Violation: This will throw an error with this message
+
+invariant(Array.isArray( 3 ), 'List of posts must be an array')
+// < Uncaught Error: Invariant Violation: List of posts must be an array
+
+invariant(Array.isArray( 3 ), 'List of posts must be an array')
+// No errors
 ```
 
 #### Browser
