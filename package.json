@@ -2,7 +2,7 @@
   "name": "invariant",
   "version": "2.0.0",
   "description": "invariant",
-  "licence": "BSD",
+  "license": "BSD",
   "author": "Andres Suarez <zertosh@gmail.com>",
   "files": [
     "README.md",
