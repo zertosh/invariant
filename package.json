@@ -16,7 +16,9 @@
   "scripts": {
     "test": "NODE_ENV=production mocha && NODE_ENV=development mocha"
   },
-  "dependencies": {},
+  "dependencies": {
+    "envify": "^3.0.0"
+  },
   "devDependencies": {
     "mocha": "^2.1.0"
   },
