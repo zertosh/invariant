@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:forbes="http://forbes.com/rss/" version="2.0">
+  <channel>
+    <link>http://www.forbes.com/technology/feed2/</link>
+    <title>Forbes - Tech</title>
+    <description>Forbes - Tech</description>
+    <item>
+      <link>http://www.forbes.com/sites/adrianbridgwater/2015/07/14/what-is-micro-virtualization-and-why-is-it-good-for-windows-10/</link>
+      <title>What Is Micro-Virtualization -- And Why Is It Good For Windows 10?</title>
+      <description>Just when you thought it was safe to understand virtualization, along comes micro-virtualization. Actually it&amp;rsquo;s not hard to understand at all and what it could do for Microsoft Windows (other operating systems are available) users (and developers) is interesting.</description>
+      <dc:creator>Adrian Bridgwater</dc:creator>
+      <guid>http://www.forbes.com/sites/adrianbridgwater/2015/07/14/what-is-micro-virtualization-and-why-is-it-good-for-windows-10/</guid>
+      <pubDate>Tue, 14 Jul 2015 08:34:00 GMT</pubDate>
+      <dc:date>2015-07-14T04:34:00Z</dc:date>
+      <media:content url="http://blogs-images.forbes.com/adrianbridgwater/files/2015/07/m7.png">
+        <media:thumbnail url="http://blogs-images.forbes.com/adrianbridgwater/files/2015/07/m7.png"/>
+      </media:content>
+    </item>
+    <item>
+      <link>http://www.forbes.com/sites/uciliawang/2015/07/14/tesla-cto-batteries-solar-will-lead-to-cheap-electricity-within-10-years/</link>
+      <title>Tesla CTO: Batteries + Solar Will Lead to Cheap Electricity Within 10 Years</title>
+      <description>Energy storage technology is key to popularizing solar energy generation, and that point was underscored by the feature speaker at a large solar energy conference in San Francisco Monday: Tesla Motors&apos; chief technology officer, JB Straubel.</description>
+      <dc:creator>Ucilia Wang</dc:creator>
+      <guid>http://www.forbes.com/sites/uciliawang/2015/07/14/tesla-cto-batteries-solar-will-lead-to-cheap-electricity-within-10-years/</guid>
+      <pubDate>Tue, 14 Jul 2015 08:23:00 GMT</pubDate>
+      <dc:date>2015-07-14T04:23:00Z</dc:date>
+      <media:content url="http://blogs-images.forbes.com/uciliawang/files/2015/05/Tesla-home-battery-pack.jpg">
+        <media:thumbnail url="http://blogs-images.forbes.com/uciliawang/files/2015/05/Tesla-home-battery-pack.jpg"/>
+      </media:content>
+    </item>
+    <item>
+      <link>http://www.forbes.com/sites/jacobmorgan/2015/07/14/what-is-the-freelance-economy/</link>
+      <title>What Is The Freelance Economy?</title>
+      <description>Freelancing is clearly a hot topic as of late, and you may have heard of the freelance economy. But what exactly is that? Sadly, there&apos;s a lot of confusion around what the freelance economy is and what or who a freelancer is! Trying to define this new space is a bit like trying to explain art, &quot;I&apos;ll know it when I see it,&quot; has become the best explanation.</description>
+      <dc:creator>Jacob Morgan</dc:creator>
+      <guid>http://www.forbes.com/sites/jacobmorgan/2015/07/14/what-is-the-freelance-economy/</guid>
+      <pubDate>Tue, 14 Jul 2015 07:08:00 GMT</pubDate>
+      <dc:date>2015-07-14T03:08:00Z</dc:date>
+      <media:content url="http://img.youtube.com/vi/WFYdquIdOlM/0.jpg">
+        <media:thumbnail url="http://img.youtube.com/vi/WFYdquIdOlM/0.jpg"/>
