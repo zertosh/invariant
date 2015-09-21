@@ -13,13 +13,14 @@
   ],
   "repository": "zertosh/invariant",
   "scripts": {
-    "test": "NODE_ENV=production mocha && NODE_ENV=development mocha"
+    "test": "NODE_ENV=production tap test/*.js && NODE_ENV=development tap test/*.js"
   },
   "dependencies": {
     "envify": "^3.0.0"
   },
   "devDependencies": {
-    "mocha": "^2.1.0"
+    "browserify": "^11.0.1",
+    "tap": "^1.4.0"
   },
   "main": "invariant.js",
   "browser": "browser.js",

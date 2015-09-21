@@ -1,73 +1,27 @@
 'use strict';
 
-var assert = require('assert');
+var browserify = require('browserify');
+var test = require('tap').test;
+var vm = require('vm');
 
-describe('invariant-browser', function() {
+var file = __dirname + '/package/' + process.env.NODE_ENV + '.js';
 
-  var invariant = require('../browser');
-
-  it('should work with a message', function() {
-    assert.doesNotThrow(function() {
-      invariant(true, 'invariant message');
-    });
-    assert.throws(function() {
-      invariant(false, 'invariant message');
-    }, /invariant message/);
-  });
-
-  if (process.env.NODE_ENV !== 'production') {
-    it('should not work without a message in DEV', function() {
-      assert.throws(function() {
-        invariant(true);
-      }, /requires an error/i);
-      assert.throws(function() {
-        invariant(false);
-      }, /requires an error/i);
-    });
-  } else {
-    it('should work without a message in PROD', function() {
-      assert.doesNotThrow(function() {
-        invariant(true);
-      });
-      assert.throws(function() {
-        invariant(false);
-      }, /minified exception occurred/i);
-    });
-  }
-
+test('node', function(t) {
+  t.plan(4);
+  require(file)(t);
 });
 
-describe('invariant', function() {
-
-  var invariant = require('../invariant');
-
-  it('should work with a message', function() {
-    assert.doesNotThrow(function() {
-      invariant(true, 'invariant message');
-    });
-    assert.throws(function() {
-      invariant(false, 'invariant message');
-    }, /invariant message/);
+test('browserify', function(t) {
+  t.plan(6);
+  var b = browserify({
+    entries: file,
+    standalone: 'package'
   });
-
-  if (process.env.NODE_ENV !== 'production') {
-    it('should not work without a message in DEV', function() {
-      assert.throws(function() {
-        invariant(true);
-      }, /requires an error/i);
-      assert.throws(function() {
-        invariant(false);
-      }, /requires an error/i);
-    });
-  } else {
-    it('should work without a message in PROD', function() {
-      assert.doesNotThrow(function() {
-        invariant(true);
-      });
-      assert.throws(function() {
-        invariant(false);
-      }, /minified exception occurred/i);
-    });
-  }
-
+  b.bundle(function(err, src) {
+    t.notOk(err);
+    t.notMatch(String(src), /\bprocess\.env\.NODE_ENV\b/);
+    var c = {};
+    vm.runInNewContext(src, c);
+    c.package(t);
+  });
 });
