@@ -12,7 +12,7 @@ test('node', function(t) {
 });
 
 test('browserify', function(t) {
-  t.plan(6);
+  t.plan(7);
   var b = browserify({
     entries: file,
     standalone: 'package'
@@ -20,6 +20,7 @@ test('browserify', function(t) {
   b.bundle(function(err, src) {
     t.notOk(err);
     t.notMatch(String(src), /\bprocess\.env\.NODE_ENV\b/);
+    t.notMatch(String(src), /__DEV__/);
     var c = {};
     vm.runInNewContext(src, c);
     c.package(t);
