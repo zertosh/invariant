@@ -2,34 +2,31 @@
   "name": "invariant",
   "version": "2.1.0",
   "description": "invariant",
-  "license": "BSD",
+  "keywords": [
+    "test"
+  ],
+  "license": "BSD-4-Clause",
   "author": "Andres Suarez <zertosh@gmail.com>",
   "files": [
-    "README.md",
     "invariant.js",
     "browser.js"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/zertosh/invariant.git"
-  },
+  "repository": "zertosh/invariant",
   "scripts": {
-    "test": "NODE_ENV=production mocha && NODE_ENV=development mocha"
+    "test": "NODE_ENV=production tap test/*.js && NODE_ENV=development tap test/*.js"
   },
   "dependencies": {
-    "envify": "^3.0.0"
+    "loose-envify": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "^2.1.0"
-  },
-  "engines": {
-    "node": ">=0.10"
+    "browserify": "^11.0.1",
+    "tap": "^1.4.0"
   },
   "main": "invariant.js",
   "browser": "browser.js",
   "browserify": {
     "transform": [
-      "envify"
+      "loose-envify"
     ]
   }
 }
