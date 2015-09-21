@@ -1,3 +1,10 @@
+2.1.1 / 2015-09-20
+==================
+
+  * Use correct SPDX license.
+  * Test "browser.js" using browserify.
+  * Switch from "envify" to "loose-envify".
+
 2.1.0 / 2015-06-03
 ==================
 
