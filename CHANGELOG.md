@@ -1,3 +1,9 @@
+2.1.0 / 2015-06-03
+==================
+
+  * Add "envify" as a dependency.
+  * Fixed license field in "package.json".
+
 2.0.0 / 2015-02-21
 ==================
 
@@ -7,14 +13,14 @@
 ==================
 
   * Added tests, npmignore and gitignore.
-  * Clarifications in README
+  * Clarifications in README.
 
 1.0.1 / 2014-09-24
 ==================
 
-  * Actually include 'invariant.js'
+  * Actually include 'invariant.js'.
 
 1.0.0 / 2014-09-24
 ==================
 
-  * Initial release
+  * Initial release.
