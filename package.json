@@ -5,7 +5,7 @@
   "keywords": [
     "test"
   ],
-  "license": "BSD-4-Clause",
+  "license": "BSD-3-Clause",
   "author": "Andres Suarez <zertosh@gmail.com>",
   "files": [
     "invariant.js",
