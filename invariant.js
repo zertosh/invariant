@@ -44,7 +44,7 @@ var invariant = function(condition, format) {
       args.splice(0, 2);
 
       error = new Error(
-        format.replace(/%s/g, function (match) {
+        format.replace(/%s/g, function(match) {
           return args.length ? args.shift() : match;
         })
       );
