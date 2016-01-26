@@ -22,7 +22,9 @@
 
 var __DEV__ = process.env.NODE_ENV !== 'production';
 
-var invariant = function(condition, format, a, b, c, d, e, f) {
+var invariant = function(condition, format) {
+  var args = Array.prototype.slice.apply(arguments);
+
   if (__DEV__) {
     if (format === undefined) {
       throw new Error('invariant requires an error message argument');
@@ -37,11 +39,16 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
         'for the full error message and additional helpful warnings.'
       );
     } else {
-      var args = [a, b, c, d, e, f];
-      var argIndex = 0;
+      // Remove `condition` and `format` from args array.
+      // We're left with an array of custom placeholder values (if any).
+      args.splice(0, 2);
+
       error = new Error(
-        format.replace(/%s/g, function() { return args[argIndex++]; })
+        format.replace(/%s/g, function(match) {
+          return args.length ? args.shift() : match;
+        })
       );
+
       error.name = 'Invariant Violation';
     }
 
