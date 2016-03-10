@@ -3,7 +3,8 @@
   "version": "2.2.1",
   "description": "invariant",
   "keywords": [
-    "test"
+    "test",
+    "invariant"
   ],
   "license": "BSD-3-Clause",
   "author": "Andres Suarez <zertosh@gmail.com>",
