@@ -3,6 +3,9 @@
 var browserify = require('browserify');
 var test = require('tap').test;
 var vm = require('vm');
+var flow = require('flow-bin');
+var execFile = require('child_process').execFile;
+var path = require('path');
 
 var file = __dirname + '/package/' + process.env.NODE_ENV + '.js';
 
@@ -24,5 +27,15 @@ test('browserify', function(t) {
     var c = {};
     vm.runInNewContext(src, c);
     c.package(t);
+  });
+});
+
+test('flow', function(t) {
+  t.plan(1);
+  execFile(flow, ['coverage', 'index.js'], {
+    cwd: path.join(__dirname, 'flow')
+  }, function (err, stdout) {
+    // If the types are broken, we'd have coverage below 100%
+    t.equal(stdout.trim(), 'Covered: 100.00% (5 of 5 expressions)');
   });
 });
