@@ -12,7 +12,7 @@
     "invariant.js",
     "browser.js"
   ],
-  "repository": "zertosh/invariant",
+  "repository": "https://github.com/zertosh/invariant",
   "scripts": {
     "test": "NODE_ENV=production tap test/*.js && NODE_ENV=development tap test/*.js"
   },
