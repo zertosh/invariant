@@ -9,8 +9,9 @@
   "license": "BSD-3-Clause",
   "author": "Andres Suarez <zertosh@gmail.com>",
   "files": [
+    "browser.js",
     "invariant.js",
-    "browser.js"
+    "invariant.js.flow"
   ],
   "repository": "https://github.com/zertosh/invariant",
   "scripts": {
