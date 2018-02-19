@@ -6,7 +6,7 @@
     "test",
     "invariant"
   ],
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "author": "Andres Suarez <zertosh@gmail.com>",
   "files": [
     "browser.js",
