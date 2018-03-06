@@ -18,7 +18,7 @@
  * will remain to ensure logic does not differ in production.
  */
 
-var invariant = function(condition, format, a, b, c, d, e, f) {
+var invariant = function(condition, format, ...args) {
   if (process.env.NODE_ENV !== 'production') {
     if (format === undefined) {
       throw new Error('invariant requires an error message argument');
@@ -33,7 +33,6 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
         'for the full error message and additional helpful warnings.'
       );
     } else {
-      var args = [a, b, c, d, e, f];
       var argIndex = 0;
       error = new Error(
         format.replace(/%s/g, function() { return args[argIndex++]; })
