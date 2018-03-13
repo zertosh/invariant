@@ -7,5 +7,13 @@
 
 [options]
 
+[strict]
+nonstrict-import
+sketchy-null
+unclear-type
+unsafe-getters-setters
+untyped-import
+untyped-type-import
+
 [version]
-0.35.0
+^0.67.0
