@@ -1,6 +1,6 @@
 {
   "name": "invariant",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "invariant",
   "keywords": [
     "test",
@@ -27,6 +27,7 @@
   },
   "main": "invariant.js",
   "browser": "browser.js",
+  "module": "invariant-es.js",
   "browserify": {
     "transform": [
       "loose-envify"
