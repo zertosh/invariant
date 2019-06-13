@@ -17,9 +17,6 @@
   "scripts": {
     "test": "NODE_ENV=production tap test/*.js && NODE_ENV=development tap test/*.js"
   },
-  "dependencies": {
-    "loose-envify": "^1.0.0"
-  },
   "devDependencies": {
     "browserify": "^11.0.1",
     "flow-bin": "^0.67.1",
