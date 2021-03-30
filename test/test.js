@@ -36,6 +36,6 @@ test('flow', function(t) {
     cwd: path.join(__dirname, 'flow')
   }, function (err, stdout) {
     // If the types are broken, we'd have coverage below 100%
-    t.equal(stdout.trim(), 'Covered: 100.00% (5 of 5 expressions)');
+    t.equal(stdout.trim(), 'Covered: 100.00% (7 of 7 expressions)');
   });
 });
