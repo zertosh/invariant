@@ -40,7 +40,7 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
       error = new Error(
         format.replace(/%s/g, function() { return args[argIndex++]; })
       );
-      error.name = 'Invariant Violation';
+      error.name = 'InvariantViolation';
     }
 
     error.framesToPop = 1; // we don't care about invariant's own frame
