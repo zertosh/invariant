@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "browserify": "^11.0.1",
-    "flow-bin": "^0.67.1",
+    "flow-bin": "^0.147.0",
     "tap": "^1.4.0"
   },
   "main": "invariant.js",
