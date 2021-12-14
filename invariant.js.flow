@@ -2,6 +2,6 @@
 
 declare module.exports: (
   condition: any,
-  format?: string,
+  format: string,
   ...args: Array<any>
 ) => void;
